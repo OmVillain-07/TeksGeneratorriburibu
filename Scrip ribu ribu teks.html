@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Teks Generator</title>
+</head>
+<body>
+ <input id="teks" type="text" placeholder="Masukkan teks">
+ <input id="jumlah" type="number" placeholder="Jumlah pengulangan">
+ <button onclick="generateTeks()">Generate</button>
+ <div id="hasil"></div>
+
+ <script>
+ function generateTeks() {
+ var teks = document.getElementById("teks").value;
+ var jumlah = parseInt(document.getElementById("jumlah").value);
+ var hasil = "";
+
+ for (var i = 0; i < jumlah; i++) {
+ hasil += teks + "<br>";
+ }
+
+ document.getElementById("hasil").innerHTML = hasil;
+ }
+ </script>
+</body>
+</html>
